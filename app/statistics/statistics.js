@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 angular.module('myApp.statistics', ['ngRoute'])
 
@@ -14,10 +14,13 @@ angular.module('myApp.statistics', ['ngRoute'])
     $http.get('http://localhost:27080/test/data/_find')
             .success(function(data){
                 $scope.dataset = data.results;
+                qq = $scope.dataset;
+                draw_graph();
+                $scope.dataset[0].count = 500;
                 draw_graph();
             });
 
-    var draw_graph = function(){
+    var draw_graph = function() {
         var margins = {
             top: 12,
             left: 80,
@@ -31,17 +34,18 @@ angular.module('myApp.statistics', ['ngRoute'])
                 return d.name;
             });
 
-        $scope.dataset = $scope.dataset.map(function(o, i){
+        // $scope.dataset = $scope.dataset.map(function(o, i){
+        var d = $scope.dataset.map(function(o, i){
             return [{y: o.count, x: o.category, y0: 0}];
         });
 
-        console.log($scope.dataset);
+        console.log(d);
 
         var stack = d3.layout.stack();
 
-        stack($scope.dataset);
+        stack(d);
 
-        $scope.dataset = $scope.dataset.map(function (group) {
+        d = d.map(function (group) {
             return group.map(function (d) {
                 // Invert the x and y values, and y0 becomes x0
                 return {
@@ -59,7 +63,7 @@ angular.module('myApp.statistics', ['ngRoute'])
             .append('g')
             .attr('transform', 'translate(' + margins.left + ',' + margins.top + ')');
 
-        var xMax = d3.max($scope.dataset, function (group) {
+        var xMax = d3.max(d, function (group) {
             return d3.max(group, function (d) {
                 return d.x + d.x0;
             });
@@ -69,7 +73,7 @@ angular.module('myApp.statistics', ['ngRoute'])
                 .domain([0, 800])
                 .range([0, width]);
 
-        var categorys = $scope.dataset[0].map(function (d) {
+        var categorys = d[0].map(function (d) {
             return d.y;
         });
 
@@ -92,7 +96,7 @@ angular.module('myApp.statistics', ['ngRoute'])
         var colours = d3.scale.category10();
 
         var groups = svg.selectAll('g')
-            .data($scope.dataset)
+            .data(d)
             .enter()
             .append('g')
             .style('fill', function (d, i) {
