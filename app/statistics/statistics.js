@@ -34,6 +34,7 @@ angular.module('myApp.statistics', ['ngRoute'])
         $scope.dataset = $scope.dataset.map(function(o, i){
             return [{y: o.count, x: o.category, y0: 0}];
         });
+
         console.log($scope.dataset);
 
         var stack = d3.layout.stack();
@@ -106,7 +107,6 @@ angular.module('myApp.statistics', ['ngRoute'])
             .append('rect')
             .attr('stroke', 'black')
             .attr('stroke-width', '3')
-            // .attr('fill', 'white')
             .attr('x', function (d) {
                 return xScale(d.x0);
             })
