@@ -4,6 +4,35 @@ body{
     font-size: 24px;
 }
 
+.hidden {
+    display: none;
+}
+
+.header {
+    overflow: hidden;
+}
+    .grey, .blue, .pct {
+        display: inline-block;
+        font-size: 45px;
+        color: white;
+        font-family: Comfortaa;
+        padding: 0 5px;
+    }
+        .grey {
+            float: left;
+            background: gray;
+        }
+        .blue {
+            float: left;
+            background: blue;
+            padding-right: 2em;
+        }
+        .pct {
+            color: blue;
+            float: left;
+        }
+
+
 table{
     font-size: 14px;
 }
