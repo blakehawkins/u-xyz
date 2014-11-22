@@ -6,6 +6,7 @@ angular.module('myApp', [
   'myApp.about',
   'myApp.recent',
   'myApp.submit',
+  'myApp.statistics',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
