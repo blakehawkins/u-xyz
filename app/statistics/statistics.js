@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 angular.module('myApp.statistics', ['ngRoute'])
 
@@ -14,7 +14,7 @@ angular.module('myApp.statistics', ['ngRoute'])
     $http.get('http://localhost:27080/test/data/_find')
             .success(function(data){
                 $scope.dataset = data.results;
-                qq = $scope.dataset;
+                var qq = $scope.dataset;
                 draw_graph();
                 $scope.dataset[0].count = 500;
                 draw_graph();
@@ -28,18 +28,13 @@ angular.module('myApp.statistics', ['ngRoute'])
             bottom: 24
         };
 
-        var width = 800 - margins.left - margins.right,
-            height = 100 - margins.top - margins.bottom,
-            series = $scope.dataset.map(function (d) {
-                return d.name;
-            });
+        var width = 800 - margins.left - margins.right;
 
-        // $scope.dataset = $scope.dataset.map(function(o, i){
+        var height = 100 - margins.top - margins.bottom;
+
         var d = $scope.dataset.map(function(o, i){
             return [{y: o.count, x: o.category, y0: 0}];
         });
-
-        console.log(d);
 
         var stack = d3.layout.stack();
 
