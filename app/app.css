@@ -4,6 +4,35 @@ body{
     font-size: 24px;
 }
 
+.hidden {
+    display: none;
+}
+
+.header {
+    overflow: hidden;
+}
+    .grey, .blue, .pct {
+        display: inline-block;
+        font-size: 45px;
+        color: white;
+        font-family: Comfortaa;
+        padding: 0 5px;
+    }
+        .grey {
+            float: left;
+            background: #666;
+        }
+        .blue {
+            float: left;
+            background: #29ABE2;
+            padding-right: 2em;
+        }
+        .pct {
+            color: #29ABE2;
+            float: left;
+        }
+
+
 table{
     font-size: 14px;
 }
@@ -20,8 +49,8 @@ tr.table-header td{
     padding: 1em 0;
 }
 
-.flat-blue{
-    background-color: #3355cc;
+.flat-grey{
+    background: #E6E6E6;
 }
 
 .flat-black{
@@ -34,8 +63,9 @@ tr.table-header td{
     font-size: 16px;
 }
 
-.flat-blue a{
-    color: #fff;
+.flat-grey a{
+    color: #666;
+    text-decoration: none;
 }
 
 .header{
