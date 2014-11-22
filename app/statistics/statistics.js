@@ -110,6 +110,13 @@ var dataset = dataset.map(function (group) {
         // .attr('width', '1')
         // .classed('axis-line', true)
         .orient('left'),
+    yAxis2 = d3.svg.axis()
+        .scale(yScale)
+        .tickSize(0)
+        .tickValues("")
+        // .attr('width', '1')
+        // .classed('axis-line', true)
+        .orient('right'),
     colours = d3.scale.category10(),
     groups = svg.selectAll('g')
         .data(dataset)
@@ -167,4 +174,9 @@ svg.append('g')
     .attr('class', 'axis')
     .attr('transform', 'translate(-3, 0)')
     .call(yAxis);
+
+svg.append('g')
+    .attr('class', 'axis')
+    .attr('transform', 'translate(724, 0)')
+    .call(yAxis2);
 }]);
