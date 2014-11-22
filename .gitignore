@@ -29,3 +29,4 @@ node_modules
 
 #mongo lock
 *.lock
+mongo-data/journal/*
