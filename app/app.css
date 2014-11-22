@@ -20,15 +20,15 @@ body{
     }
         .grey {
             float: left;
-            background: gray;
+            background: #666;
         }
         .blue {
             float: left;
-            background: blue;
+            background: #29ABE2;
             padding-right: 2em;
         }
         .pct {
-            color: blue;
+            color: #29ABE2;
             float: left;
         }
 
@@ -49,8 +49,8 @@ tr.table-header td{
     padding: 1em 0;
 }
 
-.flat-blue{
-    background-color: #3355cc;
+.flat-grey{
+    background: #E6E6E6;
 }
 
 .flat-black{
@@ -63,8 +63,9 @@ tr.table-header td{
     font-size: 16px;
 }
 
-.flat-blue a{
-    color: #fff;
+.flat-grey a{
+    color: #666;
+    text-decoration: none;
 }
 
 .header{
