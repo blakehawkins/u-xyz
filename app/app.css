@@ -1,30 +1,78 @@
-/* app css stylesheet */
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+}
+
+.flat{
+    padding: 1em 0;
+}
+
+.flat-blue{
+    background-color: #3355cc;
+}
+
+.flat-black{
+    background-color: #000;
+    color: #fff;
+}
+
+.caption{
+    text-align: center;
+    font-size: 16px;
+}
+
+.flat-blue a{
+    color: #fff;
+}
+
+.header{
+    font-family: 'Vollkorn', serif;
+    font-size: 64px;
+}
+
+.page{
+    width: 800px;
+    margin: 0 auto;
+}
 
 .menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+    list-style: none;
+    padding: 0 0 0.5em;
+}
+
+.content{
+    min-height: 500px;
+}
+
+.main{
+    line-height: 150%;
+}
+
+.footer{
+    text-align: center;
+    font-size: 14px;
+    font-color: #999;
 }
 
 .menu:before {
-  content: "[";
+    content: "[";
 }
 
 .menu:after {
-  content: "]";
+    content: "]";
 }
 
 .menu > li {
-  display: inline;
+    display: inline;
 }
 
 .menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+    content: "|";
+    padding-right: 0.3em;
 }
 
 .menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+    content: "";
+    padding: 0;
 }
