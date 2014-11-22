@@ -2,8 +2,17 @@
 <div class="page main">
     <p>Most recent listings:</p>
     <table>
-        <tr>
-
+        <tr class="table-header">
+            <td>Institution</td><td>Program</td><td>Decision</td><td>Date</td>
+            <td>Date Added</td><td>Notes</td>
+        </tr>
+        <tr ng-controllers="RecentCtrl" ng-repeat="entry in entries">
+            <td>{{entry.institution}}</td>
+            <td>{{entry.program}}</td>
+            <td>{{entry.decision}}</td>
+            <td>{{entry.date}}</td>
+            <td>{{entry.dateAdded}}</td>
+            <td>{{entry.notes}}</td>
         </tr>
     </table>
 </div>
