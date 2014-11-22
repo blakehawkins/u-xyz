@@ -32,8 +32,6 @@ angular.module('myApp.statistics', ['ngRoute'])
             });
 
         $scope.dataset = $scope.dataset.map(function(o, i){
-            // console.log(o);
-            // return [o.category, o.count];
             return [{y: o.count, x: o.category, y0: 0}];
         });
         console.log($scope.dataset);
@@ -82,17 +80,12 @@ angular.module('myApp.statistics', ['ngRoute'])
         var yAxis = d3.svg.axis()
             .scale(yScale)
             .tickSize(0)
-            // .tickValues([])
-            // .attr('width', '1')
-            // .classed('axis-line', true)
             .orient('left');
 
         var yAxis2 = d3.svg.axis()
             .scale(yScale)
             .tickSize(0)
             .tickValues("")
-            // .attr('width', '1')
-            // .classed('axis-line', true)
             .orient('right');
 
         var colours = d3.scale.category10();
