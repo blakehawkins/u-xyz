@@ -11,7 +11,7 @@ angular.module('myApp.statistics', ['ngRoute'])
 
 .controller('StatisticsCtrl', function($scope, $http) {
     // request the hardcoded stats data
-    $http.get('http://localhost:27080/test/data/_find')
+    $http.get('http://54.77.53.126:27080/test/data/_find')
             .success(function(data){
                 $scope.dataset = data.results;
                 var qq = $scope.dataset;
