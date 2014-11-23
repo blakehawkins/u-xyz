@@ -88,15 +88,31 @@ angular.module('myApp.statistics', ['ngRoute'])
             .tickValues("")
             .orient('right');
 
-        var colours = d3.scale.category10();
+        // var colours = d3.scale.category10();
+        
+        var colours = function(i) {
 
+        	var count = svg.selectAll('g')[0].length;
+        	var half = Math.round(count/2);
+
+        	return ["#18D2E7", "#15B8CA","#13A8B9","#10919E",
+        		"#0E7985","#0B5C66","#073D43","#053136","#032225"]
+        		[Math.abs(half - i)];
+        }
+
+// svg[0]= ar[countby2]
+// svg[countby2] = ar[0]
+// svg[count] = ar[countby2]
+
+
+  
         var groups = svg.selectAll('g')
             .data(d)
             .enter()
             .append('g')
             .style('fill', function (d, i) {
-            return colours(i);
-        });
+            	return colours(i);
+        	});
 
         var rects = groups.selectAll('rect')
             .data(function (d) {
