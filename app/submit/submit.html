@@ -1,11 +1,11 @@
-<div class="row page main angular-seed">
+<div class="row page main angular-seed" ng-controller="SubmitCtrl">
     <p>
         unichance.xyz is anonymous and without verification. You're free to shout your results with the world - we trust our users.
     </p>
     <div class="row">
         <div class="small-12 large-4 columns">
             <label>Nationality
-                <select>
+                <select ng-model="nationality">
                     <option value="afghan">Afghan</option>
                     <option value="albanian">Albanian</option>
                     <option value="algerian">Algerian</option>
@@ -203,20 +203,20 @@
         </div>
         <div class="small-12 large-4 columns">
             <label>Age
-                <select>
-                    <option value="husker">under 20</option>
-                    <option value="starbuck">20-25</option>
-                    <option value="hotdog">26-30</option>
-                    <option value="apollo">above 31</option>
+                <select ng-model="age">
+                    <option value="20-">under 20</option>
+                    <option value="20-25">20-25</option>
+                    <option value="26-30">26-30</option>
+                    <option value="31+">above 31</option>
                 </select>
             </label>
         </div>
         <div class="small-12 large-4 columns">
             <label>Gender
-                <select>
-                    <option value="starbuck">Male</option>
-                    <option value="hotdog">Female</option>
-                    <option value="hotdog">Prefer not to choose</option>
+                <select ng-model="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="ufo">Prefer not to choose</option>
                 </select>
             </label>
         </div>
@@ -224,38 +224,38 @@
     <div class="row">
         <div class="small-12 large-6 columns">
             <label>Choose Your Status</label>
-            <input type="radio" name="pokemon" value="Red" id="applying">
+            <input type="radio" name="pokemon" value="applying" id="applying" ng-model="unistatus">
             <label for="applying">Applying</label>
-            <input type="radio" name="pokemon" value="Blue" id="accepted">
+            <input type="radio" name="pokemon" value="accepted" id="accepted" ng-model="unistatus">
             <label for="accepted">Accepted</label>
-            <input type="radio" name="pokemon" value="Blue" id="reje">
+            <input type="radio" name="pokemon" value="rejected" id="reje" ng-model="unistatus">
             <label for="reje">Rejected</label>
-            <input type="radio" name="pokemon" value="Blue" id="waili">
+            <input type="radio" name="pokemon" value="waiting" id="waili" ng-model="unistatus">
             <label for="waili">Waiting list</label>
         </div>
          <div class="small-12 large-3 columns">
             <label>Year of Entry</label>
-             <select>
-                    <option value="husker">2014</option>
-                    <option value="starbuck">2015</option>
-                    <option value="hotdog">2016</option>
+             <select ng-model="entryyear">
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
                 </select>
         </div>
     </div>
     <div class="row">
         <div class="small-12 large-6 columns">
             <label for="">University</label>
-            <input type="text" name="uni" placeholder="University">
+            <input type="text" name="uni" placeholder="University" ng-model="university">
         </div>
         <div class="small-12 large-6 columns">
             <label for="">Programme of study</label>
-            <input type="text" name="prog" placeholder="Programme of study">
+            <input type="text" name="prog" placeholder="Programme of study" ng-model="program">
         </div>
     </div>
     <div class="row">
         <div class="small-12 large-6 columns">
             <label for="">Past Graduate</label>
-            <select name="pastgrad">
+            <select ng-model="pastgrad">
                 <option value="high">High school equivalent</option>
                 <option value="college">College</option>
                 <option value="ug">Undergraduate</option>
@@ -264,29 +264,29 @@
         </div>
         <div class="small-12 large-6 columns">
             <label for="">Previous Institute</label>
-            <input type="text" name="prev" placeholder="Previous institute">
+            <input type="text" name="prev" placeholder="Previous institute" ng-model="prev">
         </div>
     </div>
     <div class="row">
         <div class="small-12 large-4 columns">
             <label for="">Scholarship</label>
-            <input type="radio" name="sch" value="ug" id="sch-y" checked="checked">
+            <input type="radio" ng-model="sch" value="ug" id="sch-y" checked="checked">
             <label for="sch-y">Yes</label>
-            <input type="radio" name="sch" value="pg" id="sch-n">
+            <input type="radio" ng-model="sch" value="pg" id="sch-n">
             <label for="sch-n">No</label>
         </div>
         <div class="small-12 large-4 columns">
             <label for="">Work / Research Experience</label>
-            <input type="radio" name="exp" value="ug" id="exp-y" checked="checked">
+            <input type="radio" ng-model="exp" value="ug" id="exp-y" checked="checked">
             <label for="exp-y">Yes</label>
-            <input type="radio" name="exp" value="pg" id="exp-n">
+            <input type="radio" ng-model="exp" value="pg" id="exp-n">
             <label for="exp-n">No</label>
         </div>
         <div class="small-12 large-4 columns">
             <label for="">Degree</label>
-            <input type="radio" name="degree" value="ug" id="degree-ug" checked="checked">
+            <input type="radio" ng-model="degree" value="ug" id="degree-ug" checked="checked">
             <label for="degree-ug">Undergraduate</label>
-            <input type="radio" name="degree" value="pg" id="degree-pg">
+            <input type="radio" ng-model="degree" value="pg" id="degree-pg">
             <label for="degree-pg">Postgraduate</label>
         </div>
     </div>
@@ -310,42 +310,5 @@
             <div class="inner" ng-style="{ width: selectedRange + '%' || '0%' }"></div>
         </div>
     </div>
-    <button class="small-12" type="submit">Submit</button>
-    <!--
-    <form>
-        <table>
-            <tr>
-                <td>Institution</td>
-                <td>
-                    <input type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td>Program</td>
-                <td>
-                    <input type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td>Decision</td>
-                <td>
-                    <input type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td>Date</td>
-                <td>
-                    <input type="text" />
-                </td>
-            </tr>
-            <tr>
-                <td>Notes</td>
-                <td>
-                    <input type="text" />
-                </td>
-            </tr>
-        </table>
-        <input type="button" value="Submit" />
-    </form>
--->
+    <button class="small-12" type="submit" ng-click="submitClicked()">Submit</button>
 </div>
