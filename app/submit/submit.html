@@ -1,28 +1,115 @@
-
-<div class="page main">
+<div class="row page main angular-seed">
     <p>
-        unichance.xyz is anonymous and without verification. You're free to 
-        shout your results with the world - we trust our users.
+        unichance.xyz is anonymous and without verification. You're free to shout your results with the world - we trust our users.
     </p>
-
+    <div class="row">
+        <div class="small-12 large-4 columns">
+            <label>Nationality
+                <select>
+                    <option value="husker">Husker</option>
+                    <option value="starbuck">Starbuck</option>
+                    <option value="hotdog">Hot Dog</option>
+                    <option value="apollo">Apollo</option>
+                </select>
+            </label>
+        </div>
+        <div class="small-12 large-4 columns">
+            <label>Age
+                <select>
+                    <option value="husker">under 20</option>
+                    <option value="starbuck">20~25</option>
+                    <option value="hotdog">26~30</option>
+                    <option value="apollo">above 31</option>
+                </select>
+            </label>
+        </div>
+        <div class="small-12 large-4 columns">
+            <label>Gender
+                <select>
+                    <option value="husker">select..</option>
+                    <option value="starbuck">female</option>
+                    <option value="hotdog">male</option>
+                    <option value="hotdog">prefer not to choose</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-12 large-6 columns">
+            <label>Choose Your Status</label>
+            <input type="radio" name="pokemon" value="Red" id="pokemonRed">
+            <label for="pokemonRed">Applying</label>
+            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue">
+            <label for="pokemonBlue">Accepted</label>
+            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue">
+            <label for="pokemonBlue">Rejected</label>
+            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue">
+            <label for="pokemonBlue">Waiting list</label>
+        </div>
+         <div class="small-12 large-3 columns">
+            <label>Year of Entry</label>
+             <select>
+                    <option value="husker">2014</option>
+                    <option value="starbuck">2015</option>
+                    <option value="hotdog">2016</option>
+                </select>
+        </div>
+    </div>
+    <div class="progress-box" ng-app>
+        <h3>Your previous grade (in percentage)</h3>
+        <div class="percentage-cur" ng-init="grade=0">
+            <span class="num">{{ selectedGrade }}%</span>
+        </div>
+        <div class="progress-bar progress-bar-slider">
+            <input class="progress-slider" type="range" min="0" max="100" ng-model="selectedGrade">
+            <div class="inner" ng-style="{ width: selectedGrade + '%' || '0%' }"></div>
+        </div>
+    </div>
+    <div class="progress-box" ng-app>
+        <h3>Your Language test result</h3>
+        <div class="percentage-cur" ng-init="selectedRange=0">
+            <span class="num">{{ selectedRange }}%</span>
+        </div>
+        <div class="progress-bar progress-bar-slider">
+            <input class="progress-slider" type="range" min="0" max="100" ng-model="selectedRange">
+            <div class="inner" ng-style="{ width: selectedRange + '%' || '0%' }"></div>
+        </div>
+    </div>
+    <!--
     <form>
         <table>
             <tr>
-                <td>Institution</td><td><input type="text" /></td>
+                <td>Institution</td>
+                <td>
+                    <input type="text" />
+                </td>
             </tr>
             <tr>
-                <td>Program</td><td><input type="text" /></td>
+                <td>Program</td>
+                <td>
+                    <input type="text" />
+                </td>
             </tr>
             <tr>
-                <td>Decision</td><td><input type="text" /></td>
+                <td>Decision</td>
+                <td>
+                    <input type="text" />
+                </td>
             </tr>
             <tr>
-                <td>Date</td><td><input type="text" /></td>
+                <td>Date</td>
+                <td>
+                    <input type="text" />
+                </td>
             </tr>
             <tr>
-                <td>Notes</td><td><input type="text" /></td>
+                <td>Notes</td>
+                <td>
+                    <input type="text" />
+                </td>
             </tr>
         </table>
         <input type="button" value="Submit" />
     </form>
+-->
 </div>

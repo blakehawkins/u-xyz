@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>unichance.xyz</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css" />
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css" />
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js">
+    </script>
+
+</head>
+
+<body>
+    <div class="flat flat-grey">
+        <div class="page header row">
+            <div class="small-6 columns">
+                <h1 class="hidden">unichance.xyz</h1>
+                <span class="grey">uni</span>
+                <span class="blue">chance</span>
+                <span class="pct">%</span>
+            </div>
+            <div class="small-6 columns">
+                <ul class="menu">
+                    <li><a href="#/about">About</a>
+                    </li>
+                    <li><a href="#/recent">Recent</a>
+                    </li>
+                    <li><a href="#/submit">Submit</a>
+                    </li>
+                    <li><a href="#/statistics">Statistics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row form-filter">
+            <div class="small-4 columns">
+                <input type="text" placeholder="Hex Value">
+            </div>
+            <div class="small-4 columns">
+                <select>
+                    <option value="husker">Husker</option>
+                    <option value="starbuck">Starbuck</option>
+                    <option value="hotdog">Hot Dog</option>
+                    <option value="apollo">Apollo</option>
+                </select>
+            </div>
+            <div class="small-4 columns">
+                <select>
+                    <option value="husker">Husker</option>
+                    <option value="starbuck">Starbuck</option>
+                    <option value="hotdog">Hot Dog</option>
+                    <option value="apollo">Apollo</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="page">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="small-10 medium-11 columns">
+            <div class="range-slider" data-slider data-options="display_selector: #sliderOutput3;">
+                <span class="range-slider-handle" role="slider" tabindex="0"></span>
+                <span class="range-slider-active-segment"></span>
+            </div>
+        </div>
+        <div class="small-2 medium-1 columns">
+            <span id="sliderOutput3"></span>
+        </div>
+    </div>
+    <div class="content" ng-view>
+
+
+    </div>
+
+    <div class="page footer">
+        &copy; 2014 unichance.xyz
+    </div>
+
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js">
+    </script>
+    -->
+    <script src="bower_components/foundation/js/vendor/jquery.js" />
+    <script src="bower_components/foundation/js/foundation.js" />
+    <script src="bower_components/foundation/js/foundation/foundation.slider.js" />
+    
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="about/about.js"></script>
+    <script src="recent/recent.js"></script>
+    <script src="submit/submit.js"></script>
+    <script src="statistics/statistics.js"></script>
+    <script src="components/version/version.js"></script>
+    <script src="components/version/version-directive.js"></script>
+    <script src="components/version/interpolate-filter.js"></script>
+
+</body>
+
+</html>
