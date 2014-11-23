@@ -95,9 +95,9 @@ angular.module('myApp.statistics', ['ngRoute'])
         	var count = svg.selectAll('g')[0].length;
         	var half = Math.round(count/2);
 
-        	return ["#18D2E7", "#15B8CA","#13A8B9","#10919E",
-        		"#0E7985","#0B5C66","#073D43","#053136","#032225"]
-        		[Math.abs(half - i)];
+        	var arr = ["#18D2E7", "#15B8CA","#13A8B9","#10919E","#0E7985","#0B5C66","#073D43","#053136","#032225", "#000000"];
+
+        	return ( Math.abs(half - i) > arr.length ) ? "#000000" : arr[Math.abs(half - i)];
         }
 
 // svg[0]= ar[countby2]
