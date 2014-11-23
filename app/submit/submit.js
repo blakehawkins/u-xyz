@@ -14,12 +14,21 @@ angular.module('myApp.submit', ['ngRoute'])
 
 		var pushThatStuffSomewhere = function(data) {
 
-	        $http.post('http://54.77.53.126:27080/test/data/_store', data)
+	        // $http.post('http://54.77.53.126:27080/test/dataxx/_insert', data)
+	        $http.post('http://localhost:27080/test/dataxx/_insert', { docs: '["hello"]' })
 	        	.success(function(data, status, headers, config) {
 	        	    console.log("That went well.");
+	        	    console.log(data);
+	        	    console.log(status);
+	        	    console.log(headers);
+	        	    console.log(config);
 	        	})
 				.error(function(data, status, headers, config) {
-					console.log("Ain't workin'. Have a Redbull and fix it.");
+					console.log("Ain't workin. Have a Redbull and fix it.");
+					console.log(data);
+					console.log(status);
+					console.log(headers);
+					console.log(config);
 				});
 		}
 
@@ -41,6 +50,7 @@ angular.module('myApp.submit', ['ngRoute'])
 				range: $scope.selectedRange
 			}
 			console.log(data);
+			pushThatStuffSomewhere(data);
 		}
 
 });

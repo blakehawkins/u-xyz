@@ -1,4 +1,4 @@
-<div class="row page main angular-seed" ng-controller="SubmitCtrl">
+<div class="row page main angular-seed" ng-controller="SubmitCtrl" ng-init="unistatus='applying';entryyear='2014';nationality='british'">
     <p>
         unichance.xyz is anonymous and without verification. You're free to shout your results with the world - we trust our users.
     </p>
@@ -203,7 +203,7 @@
         </div>
         <div class="small-12 large-4 columns">
             <label>Age
-                <select ng-model="age">
+                <select ng-model="age" ng-init="age='20-'">
                     <option value="20-">under 20</option>
                     <option value="20-25">20-25</option>
                     <option value="26-30">26-30</option>
@@ -213,7 +213,7 @@
         </div>
         <div class="small-12 large-4 columns">
             <label>Gender
-                <select ng-model="gender">
+                <select ng-model="gender" ng-init="gender='male'">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="ufo">Prefer not to choose</option>
