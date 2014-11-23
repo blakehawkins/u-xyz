@@ -100,12 +100,6 @@ angular.module('myApp.statistics', ['ngRoute'])
         	return ( Math.abs(half - i) > arr.length ) ? "#000000" : arr[Math.abs(half - i)];
         }
 
-// svg[0]= ar[countby2]
-// svg[countby2] = ar[0]
-// svg[count] = ar[countby2]
-
-
-  
         var groups = svg.selectAll('g')
             .data(d)
             .enter()
