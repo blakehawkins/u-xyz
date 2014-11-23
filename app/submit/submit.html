@@ -224,14 +224,14 @@
     <div class="row">
         <div class="small-12 large-6 columns">
             <label>Choose Your Status</label>
-            <input type="radio" name="pokemon" value="Red" id="pokemonRed">
-            <label for="pokemonRed">Applying</label>
-            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue">
-            <label for="pokemonBlue">Accepted</label>
-            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue">
-            <label for="pokemonBlue">Rejected</label>
-            <input type="radio" name="pokemon" value="Blue" id="pokemonBlue">
-            <label for="pokemonBlue">Waiting list</label>
+            <input type="radio" name="pokemon" value="Red" id="applying">
+            <label for="applying">Applying</label>
+            <input type="radio" name="pokemon" value="Blue" id="accepted">
+            <label for="accepted">Accepted</label>
+            <input type="radio" name="pokemon" value="Blue" id="reje">
+            <label for="reje">Rejected</label>
+            <input type="radio" name="pokemon" value="Blue" id="waili">
+            <label for="waili">Waiting list</label>
         </div>
          <div class="small-12 large-3 columns">
             <label>Year of Entry</label>
@@ -277,7 +277,7 @@
     </div>
     <div class="progress-box" ng-app>
         <h3>Your previous grade (in percentage)</h3>
-        <div class="percentage-cur" ng-init="grade=0">
+        <div class="percentage-cur" ng-init="selectedGrade=0">
             <span class="num">{{ selectedGrade }}%</span>
         </div>
         <div class="progress-bar progress-bar-slider">
@@ -295,6 +295,7 @@
             <div class="inner" ng-style="{ width: selectedRange + '%' || '0%' }"></div>
         </div>
     </div>
+    <button class="small-12" type="submit">Submit</button>
     <!--
     <form>
         <table>
