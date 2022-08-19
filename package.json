@@ -6,11 +6,11 @@
   "repository": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "dependencies": {
+    "cryptiles": ">=4.1.2",
     "lodash": ">=4.17.21",
     "minimist": ">=1.2.6"
   },
   "devDependencies": {
-    "cryptiles": ">=4.1.2",
     "karma": "~6.4.0",
     "protractor": "^1.1.1",
     "http-server": "^0.6.1",
