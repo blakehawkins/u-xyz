@@ -53,3 +53,8 @@ Generating entries from UCAS statistics
 ---
 
 `python tools/csv-parser.py`
+
+Ops
+---
+
+`npm update`
