@@ -33,7 +33,7 @@ Running
 To duplicate our stack you should:
 
 * Have a remote server listening on port 80 (we use AWS + nginx as a means of forwarding to our angular seed)
-* Have the angular seed running
+* Have the angular seed running (`npm run start`)
 * Have a mongodb instance running with a static database location
 * Have a service for the interface to mongo from angular - we use sleepy.mongoose.
 
